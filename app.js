@@ -12,7 +12,7 @@ const promptUser = () => {
         if (nameInput) {
           return true;
         } else {
-          console.log("You must enter a project title.");
+          console.log("You must enter a project title");
           return false;
         }
       },
@@ -33,9 +33,21 @@ const promptUser = () => {
     },
     //question 3
     {
-      type: "checkbox",
+      type: "input",
       name: "installation",
-      message: "",
+      message: "Describe the installation process (if any)",
     },
+        //question 4
+        {
+            type: "input",
+            name: "usage",
+            message: "What is this project used for?",
+          },
+      
   ]);
 };
+
+promptUser()
+.then(promptUser => {
+    console.log(promptUser);
+})
